@@ -1,70 +1,102 @@
 :root {
-    --primery-text-color: rgba(0, 0, 0, 0.8);
-    --title-text-color: #000000;
-    --accent-color: #18a0fb;
-    --primery-white-color: #ffffff; 
+  --primery-text-color: rgba(0, 0, 0, 0.8);
+  --title-text-color: #000000;
+  --accent-color: #18a0fb;
+  --primery-white-color: #ffffff;
 }
 
 body {
-    background-color: var(--primery-white-color);
-    color: var(--primery-text-color);
+  background-color: var(--primery-white-color);
+  color: var(--primery-text-color);
+
+  font-family: Montserrat, sans-serif;
+  letter-spacing: -0.015em;
+  font-size: 18px;
+  line-height: 1.67;
 }
 
-/* Site nav */
+/* Logo */
 .logo {
-    color: var(--title-text-color);
+  color: var(--title-text-color);
+  font-family: Comfortaa, cursive;
+
+  font-size: 28px;
+  line-height: 1.14;
+  text-decoration: none;
 }
 
 .logo:hover {
-    color: var(--accent-color);
+  color: var(--accent-color);
 }
 
+/* Site nav */
 .list {
-    list-style: none;
+  list-style: none;
 }
 
 .site-nav .link {
-    color: var(--accent-color);
+  color: var(--accent-color);
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.2;
+  text-decoration: none;
 }
 
 .site-nav .link:hover,
 .site-nav .link:focus {
-    color: var(--title-text-color);
+  color: var(--title-text-color);
 }
 
 /* Hero */
 .hero-title {
-    color: var(--title-text-color);
+  color: var(--title-text-color);
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 1.43;
+  text-align: center;
 }
 
 /* Section */
 
 .section-title {
-    color: var(--title-text-color);
+  color: var(--title-text-color);
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 1.5;
+  text-align: center;
 }
 
-/* Features */
-.feature-list .title {
-    color: var(--title-text-color);
+.section-description {
+    font-size: 36px;
+    line-height: 1.39;
 }
 
-/* Examples */
+/* Features, Examples*/
+.feature-list .title,
 .work-list .title {
-    color: var(--title-text-color);
+  color: var(--title-text-color);
+
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.5;
 }
 
 /* Button */
 .button {
-    color: var(--title-text-color);
-    background-color: var(--primery-white-color);
+  color: var(--title-text-color);
+  background-color: var(--primery-white-color);
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 1.2;
+  text-decoration: none;
 }
 
 .button.primery {
-    color: var(--primery-white-color);
-    background-color: var(--accent-color);
+  color: var(--primery-white-color);
+  background-color: var(--accent-color);
 }
 
 .button.secondary {
-    color: var(--accent-color);
-    background-color: var(--primery-white-color);
+  color: var(--accent-color);
+  background-color: var(--primery-white-color);
 }
