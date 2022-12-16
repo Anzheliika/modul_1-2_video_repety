@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/forms.css" />
+  </head>
+  <body>
+    <form class="form js-speaker-form">
+      <div class="form-field">
+        <label for="name" class="form-label">Name</label>
+        <input
+          class="form-input"
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Anzhela"
+          autofocus
+        />
+      </div>
+      <!-- <label>
+        Name
+        <input type="text" name="name">
+      </label>
+    в цьому випадку, коли input вкладений в label, 
+    то не потрібно вказувати антрибув "for" і "id", 
+    звязок між ними відбувається автоматично. Проте зазвичай 
+    використовують окремо і не вкладують тег input в label.
+    -->
+      <div class="form-field">
+        <label for="tel" class="form-label">Phone number</label>
+        <input
+          class="form-input"
+          type="tel"
+          name="tel"
+          id="tel"
+          placeholder="+380 xx xxx xxx"
+        />
+      </div>
+
+      <div class="form-field">
+        <label for="mail" class="form-label">E-mail</label>
+        <input
+          class="form-input"
+          type="email"
+          name="mail"
+          id="mail"
+          placeholder="mail@gmail.com"
+        />
+      </div>
+
+      <div role="group" class="group">
+        <h2 class="group-title">Тема докладу</h2>
+
+        <ul class="topic-options">
+          <li>
+            <input
+              type="checkbox"
+              name="topic"
+              value="html"
+              id="html"
+              checked
+            />
+            <label for="html">HTML</label>
+          </li>
+
+          <li>
+            <input type="checkbox" name="topic" value="html" id="css" checked />
+            <label for="css">CSS</label>
+          </li>
+
+          <li>
+            <input type="checkbox" name="topic" value="html" id="js" />
+            <label for="js">JavaScript</label>
+          </li>
+          <!-- ім'я має бути однакове для всіх чекбоксів -->
+        </ul>
+      </div>
+      <!-- fieldset не підтримується Firefox-->
+
+      <!-- <div role="group">
+    <input type="checkbox" name="topic" value="html" id="html">
+    <label for="html">HTML</label>
+
+    <input type="checkbox" name="topic" value="html" id="css">
+    <label for="css">CSS</label>
+
+    <input type="checkbox" name="topic" value="html" id="js">
+    <label for="js">JavaScript</label>
+    </div> -->
+      <!--атрибут'role' використовується для підвищення симантики в несимантичній розмітці, використовується дуже рідко-->
+
+      <div role="group" class="group">
+        <h2 class="group-title">Рівень</h2>
+
+        <ul class="experience-options">
+          <li>
+            <input
+              type="radio"
+              name="experience"
+              value="junior"
+              id="junior"
+              checked
+            />
+            <label for="junior">Junior</label>
+          </li>
+
+          <li>
+            <input type="radio" name="experience" value="middle" id="middle" />
+            <label for="middle">Middle</label>
+          </li>
+
+          <li>
+            <input type="radio" name="experience" value="senior" id="senior" />
+            <label for="senior">Senior</label>
+          </li>
+        </ul>
+        <!-- якщо не задати ім'я групі радіокнопок, тоді можна буде обрати 
+        більше однієї кнопки одночасно, це неправильно, тому вказувати однакове name обов'язково -->
+      </div>
+
+      <div class="form-field">
+        <label for="date">Дата докладу</label>
+        <input type="datetime-local" name="date" id="date" class="date"/>
+      </div>
+
+      <div class="form-field">
+        <label for="pdf">Загрузити копію документа в pdf</label>
+        <input type="file" name="pdf" id="pdf" />
+      </div>
+
+      <div class="form-field">
+        <label for="comment">Залиште коментарій</label>
+        <textarea
+        class="comment"
+          name="comment"
+          id="comment"
+          rows="8"
+          placeholder="Уточніть деталі докладу"
+        ></textarea>
+      </div>
+
+      <div class="">
+        <input type="checkbox" name="policy" id="policy" />
+        <label for="policy">Погоджуюсь на обробку даних</label>
+      </div>
+
+      <button type="submit">Залишити заявку</button>
+      <!-- submit - аикористовується для автоматичної відправки форми -->
+    </form>
+
+    <form class="form-form">
+      <div class="field">
+        <input type="text" class="input" name="name" id="name" placeholder=" ">
+        <label for="name" class="label">Name</label>
+        <span class="icon"></span>
+      </div>
+
+      <div class="field">
+        <input
+          class="input"
+          type="email"
+          name="mail"
+          id="mail"
+          placeholder=" "
+        />
+        <label for="mail" class="label">E-mail</label>
+        <span class="icon"></span>
+      </div>
+
+      <button type="submit">Залишити заявку</button>
+    </form>
+
+    
+
+    <script>
+      (() => {
+        document
+          .querySelector('.js-speaker-form')
+          .addEventListener('submit', e => {
+            e.preventDefault();
+
+            new FormData(e.currentTarget).forEach((value, name) =>
+              console.log(`${name}: ${value}`),
+            );
+
+            e.currentTarget.reset();
+          });
+      })();
+    </script>
+  </body>
+</html>

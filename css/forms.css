@@ -1,0 +1,118 @@
+textarea {
+  resize: none;
+}
+
+.form {
+  width: 600px;
+  outline: 1px solid violet;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.form-input {
+  padding: 10px 20px;
+  border: 1px solid blueviolet;
+  border-radius: 5px;
+  font-size: 20px;
+}
+.form-input::placeholder {
+  color: plum;
+}
+/* placeholderу можна задавати лише властивості, які стосуються тексту, геометрію задавати не можна  */
+.form-label {
+  margin-bottom: 5px;
+}
+.group-title {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.topic-options {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.topic-options li {
+  display: flex;
+  align-items: center;
+}
+.topic-options label {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.experience-options {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.group {
+  margin-bottom: 20px;
+}
+
+.date {
+  border-color: blueviolet;
+  border-radius: 5px;
+  padding: 20px 40px;
+  font-size: 20px;
+  color: plum;
+}
+
+.comment {
+  padding: 8px;
+}
+
+.form-form {
+  padding: 20px;
+  margin: 20px;
+  width: 600px;
+}
+.field {
+  position: relative;
+  margin-bottom: 20px;
+}
+.label {
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  transform: translateY(-50%);
+
+  transition: transform 250ms linear, color 250ms linear;
+}
+.input {
+  width: 100%;
+  margin: 0;
+  padding: 10px 20px;
+  font: inherit;
+  border-radius: 3px;
+  border: 1px solid #2a2a2a;
+}
+
+.input:focus + .label,
+input:not(:placeholder-shown) + .label {
+  transform: translateY(-40px);
+  color: blue;
+}
+.input:placeholder-shown {
+  background-color: lightskyblue;
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: blue;
+  transition: background-color 250ms linear;
+}
+.input:focus ~ .icon {
+  background-color: blueviolet;
+}

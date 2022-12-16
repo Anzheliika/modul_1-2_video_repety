@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BEM</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/bem.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <nav class="page-header__nav">
+        <a href="" class="logo page-header__logo">
+        <img src="./images/logo.svg" alt="Logo" class="logo__image" />
+        <span class="logo__text">Techno</span>
+      </a>
+
+      <ul class="site-nav">
+        <li class="site-nav__item">
+          <a href="" class="site-nav__link site-nav__link--active"
+            >About<span class="site-nav__icon">Icons</span></a
+          >
+        </li>
+        <li class="site-nav__item">
+          <a href="" class="site-nav__link"
+            >Portfolio<span class="site-nav__icon">Icons</span></a
+          >
+        </li>
+        <li class="site-nav__item">
+          <a href="" class="site-nav__link"
+            >Contacts<span class="site-nav__icon">Icons</span></a
+          >
+        </li>
+      </ul>
+      </nav>
+    </header>
+
+    <ul class="card-set">
+      <li class="card-set__item">
+        <article class="product">
+          <img src="/images/photo.jpg" alt="" class="product-image" />
+          <div class="product-meta">
+            <h3 class="product__name">Name</h3>
+            <p class="product__size">Size</p>
+            <button class="product-button">Buy</button>
+          </div>
+        </article>
+      </li>
+
+      <li class="card-set__item">
+        <article class="product">
+          <img src="/images/photo.jpg" alt="" class="product-image" />
+          <div class="product-meta">
+            <h3 class="product__name">Name</h3>
+            <p class="product__size">Size</p>
+            <button class="product-button">Buy</button>
+          </div>
+        </article>
+      </li>
+    </ul>
+
+    <button class="button">
+      <span class="button__icon">Icons</span>
+      <span class="button__text">Text button</span>
+    </button>
+
+    <p class="notification notification--success">The operation is done <span class="notification__icon notification__icon--append"></span></p>
+    <p class="notification notification--warning"><span class="notification__icon notification__icon--prepend"></span>Attention, the tariffs will be changed</p>
+    <p class="notification notification--error">Transaction error</p>
+
+    <footer class="page-footer">
+      <a href="" class="logo">
+        <img src="./images/logo.svg" alt="Logo" class="logo__image" />
+        <span class="logo__text logo__text--inverse">Techno</span>
+      </a>
+    </footer>
+  </body>
+</html>
